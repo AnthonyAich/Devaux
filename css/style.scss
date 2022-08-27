@@ -311,3 +311,111 @@ main.index {
         display: none;
     }
 }
+
+@media screen and (max-width: 768px) {
+    main.index {
+        section.main {
+            grid-template-columns: 1fr;
+
+            .right {
+                grid-template-rows: 75px 1fr 60px;
+
+                .nav {
+                    nav {
+                        .navLinks {
+                            a {
+                                margin: 0 15px;
+                            }
+                        }
+                    }
+                }
+
+                .text {
+                    img {
+                        width: 250px;
+                    }
+
+                    h1 {
+                        font-size: 18px;
+                    }
+                }
+
+                .onder {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .plaats {
+                        p {
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .telefoon {
+                        p {
+                            font-size: 14px;
+
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.uitbaatster {
+            grid-template-columns: 1fr;
+
+            .left {
+                margin: auto 25px;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                .telefoonEnPlaats {
+                    position: relative;
+                    bottom: -35px;
+
+                    p {
+                        color: #373536;
+                        font-size: 14px;
+                        font-weight: normal;
+                        letter-spacing: 3px;
+
+                        i {
+                            color: #373536;
+                            font-size: 14px;
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+
+        }
+
+        section.openingsuren {
+            h2 {
+                font-size: 18px;
+            }
+
+            article {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

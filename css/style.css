@@ -353,4 +353,82 @@ main.index section.openingsuren article p {
 .horizontalScroll ::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 768px) {
+  main.index section.main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main.index section.main .right {
+    -ms-grid-rows: 75px 1fr 60px;
+        grid-template-rows: 75px 1fr 60px;
+  }
+  main.index section.main .right .nav nav .navLinks a {
+    margin: 0 15px;
+  }
+  main.index section.main .right .text img {
+    width: 250px;
+  }
+  main.index section.main .right .text h1 {
+    font-size: 18px;
+  }
+  main.index section.main .right .onder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.index section.main .right .onder .plaats p a {
+    font-size: 14px;
+  }
+  main.index section.main .right .onder .telefoon p {
+    font-size: 14px;
+  }
+  main.index section.main .right .onder .telefoon p a {
+    font-size: 14px;
+  }
+  main.index section.uitbaatster {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main.index section.uitbaatster .left {
+    margin: auto 25px;
+  }
+  main.index section.uitbaatster .left h1 {
+    font-size: 24px;
+  }
+  main.index section.uitbaatster .left p {
+    font-size: 16px;
+  }
+  main.index section.uitbaatster .left .telefoonEnPlaats {
+    position: relative;
+    bottom: -35px;
+  }
+  main.index section.uitbaatster .left .telefoonEnPlaats p {
+    color: #373536;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 3px;
+  }
+  main.index section.uitbaatster .left .telefoonEnPlaats p i {
+    color: #373536;
+    font-size: 14px;
+    margin-right: 0px;
+  }
+  main.index section.uitbaatster .right {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main.index section.openingsuren h2 {
+    font-size: 18px;
+  }
+  main.index section.openingsuren article p {
+    font-size: 16px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
