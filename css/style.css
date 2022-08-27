@@ -148,8 +148,8 @@ main.index section.main .right .nav nav {
 }
 
 main.index section.main .right .nav nav .navLinks {
-  -webkit-animation: textTransition 1.5s ease-in-out;
-          animation: textTransition 1.5s ease-in-out;
+  -webkit-animation: textTransition 1s ease-in-out;
+          animation: textTransition 1s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,13 +191,13 @@ main.index section.main .right .text {
 
 main.index section.main .right .text img {
   width: 350px;
-  -webkit-animation: textTransition 1s ease-in-out;
-          animation: textTransition 1s ease-in-out;
+  -webkit-animation: textTransition 1.5s ease-in-out;
+          animation: textTransition 1.5s ease-in-out;
 }
 
 main.index section.main .right .text h1 {
-  -webkit-animation: textTransition 1s ease-in-out;
-          animation: textTransition 1s ease-in-out;
+  -webkit-animation: textTransition 1.5s ease-in-out;
+          animation: textTransition 1.5s ease-in-out;
   font-size: 24px;
   font-weight: normal;
   color: #fff;
@@ -211,8 +211,8 @@ main.index section.main .right .onder {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-animation: textTransition 1.5s ease-in-out;
-          animation: textTransition 1.5s ease-in-out;
+  -webkit-animation: textTransition 1s ease-in-out;
+          animation: textTransition 1s ease-in-out;
 }
 
 main.index section.main .right .onder .plaats p {

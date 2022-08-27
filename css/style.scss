@@ -115,7 +115,7 @@ main.index {
                     top: 0;
 
                     .navLinks {
-                        animation: textTransition 1.5s ease-in-out;
+                        animation: textTransition 1s ease-in-out;
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
@@ -146,11 +146,11 @@ main.index {
 
                 img {
                     width: 350px;
-                    animation: textTransition 1s ease-in-out;
+                    animation: textTransition 1.5s ease-in-out;
                 }
 
                 h1 {
-                    animation: textTransition 1s ease-in-out;
+                    animation: textTransition 1.5s ease-in-out;
                     font-size: 24px;
                     font-weight: normal;
                     color: #fff;
@@ -162,7 +162,7 @@ main.index {
             .onder {
                 display: flex;
                 justify-content: space-around;
-                animation: textTransition 1.5s ease-in-out;
+                animation: textTransition 1s ease-in-out;
 
                 .plaats {
                     p {
