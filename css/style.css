@@ -215,7 +215,7 @@ main.index section.main .right .onder {
           animation: textTransition 1s ease-in-out;
 }
 
-main.index section.main .right .onder .plaats p {
+main.index section.main .right .onder .plaats p a {
   color: #fff;
   font-size: 18px;
   font-weight: normal;
@@ -223,7 +223,7 @@ main.index section.main .right .onder .plaats p {
   text-align: center;
 }
 
-main.index section.main .right .onder .plaats p i {
+main.index section.main .right .onder .plaats p a i {
   color: #fff;
   font-size: 18px;
   margin-right: 0px;

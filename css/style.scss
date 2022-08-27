@@ -166,16 +166,18 @@ main.index {
 
                 .plaats {
                     p {
-                        color: #fff;
-                        font-size: 18px;
-                        font-weight: normal;
-                        letter-spacing: 3px;
-                        text-align: center;
-
-                        i {
+                        a {
                             color: #fff;
                             font-size: 18px;
-                            margin-right: 0px;
+                            font-weight: normal;
+                            letter-spacing: 3px;
+                            text-align: center;
+
+                            i {
+                                color: #fff;
+                                font-size: 18px;
+                                margin-right: 0px;
+                            }
                         }
                     }
                 }
