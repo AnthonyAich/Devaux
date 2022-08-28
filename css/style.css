@@ -26,6 +26,25 @@
   background: #888;
 }
 
+.logoMini {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 75px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(55, 53, 54, 0.7);
+  z-index: 18000;
+  padding-top: 17px;
+  padding-left: 7%;
+}
+
+.logoMini img {
+  height: 70%;
+}
+
 main.index .arrowScroll {
   position: absolute;
   bottom: 55px;
@@ -79,7 +98,7 @@ main.index .arrowScroll i:hover {
 
 main.index section.main {
   width: 100%;
-  height: 98vh;
+  height: 200vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -87,20 +106,19 @@ main.index section.main {
 }
 
 main.index section.main img.left {
-  width: 100%;
-  height: 98vh;
+  width: 50%;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 main.index section.main .right {
   background-color: #373536;
   color: #fff;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 75px 1fr 60px;
-      grid-template-rows: 75px 1fr 60px;
-  width: 100%;
+  overflow-y: scroll;
 }
 
 @-webkit-keyframes textTransition {
@@ -129,25 +147,34 @@ main.index section.main .right {
   }
 }
 
-main.index section.main .right .nav {
+main.index section.main .right .top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 75px 1fr 60px;
+      grid-template-rows: 75px 1fr 60px;
   width: 100%;
+  height: 100vh;
+}
+
+main.index section.main .right .top .nav {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-main.index section.main .right .nav nav {
-  height: 75px;
-  font-size: 24px;
-  line-height: 75px;
   position: fixed;
   top: 0;
 }
 
-main.index section.main .right .nav nav .navLinks {
+main.index section.main .right .top .nav nav {
+  height: 75px;
+  font-size: 24px;
+  line-height: 75px;
+}
+
+main.index section.main .right .top .nav nav .navLinks {
   -webkit-animation: textTransition 1s ease-in-out;
           animation: textTransition 1s ease-in-out;
   display: -webkit-box;
@@ -159,21 +186,21 @@ main.index section.main .right .nav nav .navLinks {
   width: 100%;
 }
 
-main.index section.main .right .nav nav .navLinks a {
+main.index section.main .right .top .nav nav .navLinks a {
   margin: 0 35px;
   color: #888;
 }
 
-main.index section.main .right .nav nav .navLinks a:hover {
+main.index section.main .right .top .nav nav .navLinks a:hover {
   color: white;
 }
 
-main.index section.main .right .nav nav .navLinks .active {
+main.index section.main .right .top .nav nav .navLinks .active {
   border-bottom: 1px solid white;
   color: white;
 }
 
-main.index section.main .right .text {
+main.index section.main .right .top .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,13 +216,13 @@ main.index section.main .right .text {
           align-items: center;
 }
 
-main.index section.main .right .text img {
+main.index section.main .right .top .text img {
   width: 350px;
   -webkit-animation: textTransition 1.5s ease-in-out;
           animation: textTransition 1.5s ease-in-out;
 }
 
-main.index section.main .right .text h1 {
+main.index section.main .right .top .text h1 {
   -webkit-animation: textTransition 1.5s ease-in-out;
           animation: textTransition 1.5s ease-in-out;
   font-size: 24px;
@@ -205,7 +232,7 @@ main.index section.main .right .text h1 {
   margin-top: 5px;
 }
 
-main.index section.main .right .onder {
+main.index section.main .right .top .onder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +242,7 @@ main.index section.main .right .onder {
           animation: textTransition 1s ease-in-out;
 }
 
-main.index section.main .right .onder .plaats p a {
+main.index section.main .right .top .onder .plaats p a {
   color: #fff;
   font-size: 18px;
   font-weight: normal;
@@ -223,13 +250,13 @@ main.index section.main .right .onder .plaats p a {
   text-align: center;
 }
 
-main.index section.main .right .onder .plaats p a i {
+main.index section.main .right .top .onder .plaats p a i {
   color: #fff;
   font-size: 18px;
   margin-right: 0px;
 }
 
-main.index section.main .right .onder .telefoon p {
+main.index section.main .right .top .onder .telefoon p {
   color: #fff;
   font-size: 18px;
   font-weight: normal;
@@ -237,18 +264,22 @@ main.index section.main .right .onder .telefoon p {
   text-align: center;
 }
 
-main.index section.main .right .onder .telefoon p i {
+main.index section.main .right .top .onder .telefoon p i {
   color: #fff;
   font-size: 18px;
   margin-right: 0px;
 }
 
-main.index section.main .right .onder .telefoon p a {
+main.index section.main .right .top .onder .telefoon p a {
   color: #fff;
   font-size: 18px;
   font-weight: normal;
   letter-spacing: 3px;
   text-align: center;
+}
+
+main.index section.main .right .bottom {
+  height: 100vh;
 }
 
 main.index section.uitbaatster {
@@ -258,7 +289,7 @@ main.index section.uitbaatster {
       grid-template-columns: 1fr 1fr;
 }
 
-main.index section.uitbaatster .left {
+main.index section.uitbaatster .leftUit {
   margin: auto 125px;
   display: -ms-grid;
   display: grid;
@@ -267,32 +298,32 @@ main.index section.uitbaatster .left {
   gap: 25px;
 }
 
-main.index section.uitbaatster .left h1 {
+main.index section.uitbaatster .leftUit h1 {
   font-size: 34px;
   color: #373536;
   letter-spacing: 5px;
 }
 
-main.index section.uitbaatster .left p {
+main.index section.uitbaatster .leftUit p {
   font-size: 20px;
   color: #373536;
   letter-spacing: 3px;
   margin-top: 5px;
 }
 
-main.index section.uitbaatster .left .telefoonEnPlaats {
+main.index section.uitbaatster .leftUit .telefoonEnPlaats {
   position: relative;
   bottom: -35px;
 }
 
-main.index section.uitbaatster .left .telefoonEnPlaats p {
+main.index section.uitbaatster .leftUit .telefoonEnPlaats p {
   color: #373536;
   font-size: 18px;
   font-weight: normal;
   letter-spacing: 3px;
 }
 
-main.index section.uitbaatster .left .telefoonEnPlaats p i {
+main.index section.uitbaatster .leftUit .telefoonEnPlaats p i {
   color: #373536;
   font-size: 18px;
   margin-right: 0px;
@@ -334,26 +365,6 @@ main.index section.openingsuren article p {
   padding: 5px;
 }
 
-.horizontalScroll {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-  border: none;
-  background-color: #373536;
-}
-
-.horizontalScroll img {
-  display: inline-block;
-}
-
-.horizontalScroll ::-webkit-scrollbar {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
   main.index section.main {
     -ms-grid-rows: 1fr 1fr;
@@ -362,7 +373,10 @@ main.index section.openingsuren article p {
         grid-template-columns: 1fr;
         grid-template-areas: "right" "left";
   }
-  main.index section.main img.left {
+  main.index section.main #scrollableImage {
+    display: none;
+  }
+  main.index section.main img.imgKlein {
     width: 100%;
     height: 49vh;
     -o-object-fit: cover;
@@ -411,28 +425,28 @@ main.index section.openingsuren article p {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  main.index section.uitbaatster .left {
+  main.index section.uitbaatster .leftUit {
     margin: auto 25px;
     height: 65vh;
   }
-  main.index section.uitbaatster .left h1 {
+  main.index section.uitbaatster .leftUit h1 {
     font-size: 24px;
     margin-top: 25px;
   }
-  main.index section.uitbaatster .left p {
+  main.index section.uitbaatster .leftUit p {
     font-size: 16px;
   }
-  main.index section.uitbaatster .left .telefoonEnPlaats {
+  main.index section.uitbaatster .leftUit .telefoonEnPlaats {
     position: relative;
     bottom: 0px;
   }
-  main.index section.uitbaatster .left .telefoonEnPlaats p {
+  main.index section.uitbaatster .leftUit .telefoonEnPlaats p {
     color: #373536;
     font-size: 14px;
     font-weight: normal;
     letter-spacing: 3px;
   }
-  main.index section.uitbaatster .left .telefoonEnPlaats p i {
+  main.index section.uitbaatster .leftUit .telefoonEnPlaats p i {
     color: #373536;
     font-size: 14px;
     margin-right: 0px;
@@ -448,6 +462,251 @@ main.index section.openingsuren article p {
   }
   main.index section.openingsuren article p {
     font-size: 16px;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 75px;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 10%;
+  height: 75px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  margin-left: 1vw;
+  background: none;
+  border: 0.05vw solid #373536;
+  outline: none;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 1vw;
+  border-radius: 0.25vw;
+  padding: 0.25vw 0.5vw;
+  -webkit-animation: navItems 2s ease-in-out;
+          animation: navItems 2s ease-in-out;
+}
+
+.nav-item {
+  margin-left: 1.5vw;
+  -webkit-animation: navItems 2s ease-in-out;
+          animation: navItems 2s ease-in-out;
+}
+
+.nav-item:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.nav-item:nth-of-type(2) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.nav-item:nth-of-type(3) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.nav-item:nth-of-type(4) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.nav-link {
+  font-size: 1vw;
+  font-weight: 200;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #373536;
+}
+
+.nav-logo img {
+  height: 45px;
+  width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: Calc(100vh);
+    border-radius: 10px;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background-color: rgba(55, 53, 54, 0.7);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .nav-link {
+    font-size: 20px;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes navItems {
+  0% {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes navItems {
+  0% {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes iconAnimTop {
+  0% {
+    -webkit-transform: translateY(0vw);
+            transform: translateY(0vw);
+  }
+  50% {
+    -webkit-transform: translateY(-10vw);
+            transform: translateY(-10vw);
+  }
+  100% {
+    -webkit-transform: translateY(0vw);
+            transform: translateY(0vw);
+  }
+}
+
+@keyframes iconAnimTop {
+  0% {
+    -webkit-transform: translateY(0vw);
+            transform: translateY(0vw);
+  }
+  50% {
+    -webkit-transform: translateY(-10vw);
+            transform: translateY(-10vw);
+  }
+  100% {
+    -webkit-transform: translateY(0vw);
+            transform: translateY(0vw);
+  }
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 /*# sourceMappingURL=style.css.map */

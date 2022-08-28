@@ -8,42 +8,72 @@
     <title>Beasserie Devaux</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/c12d36ecaa.js" crossorigin="anonymous"></script>
+    <script defer src="js/scrollNavBar.js"></script>
 </head>
 
 <body>
     <main class="index">
-        <section class="main">
-            <img class="left" src="./images/pexels-nadin-sh-11513598.jpg" alt="image">
-            <div class="right">
-                <div class="nav">
-                    <nav>
-                        <div class="navLinks">
-                            <a href="#" class="active">Home</a><a href="brasserie.html">Brasserie</a><a
-                                href="takeaway.html">Takeaway</a><a href="devaux.html">Devaux</a><a
-                                href="contact.html">Contact</a>
-                        </div>
-                    </nav>
+        <header class="header">
+            <nav class="navbar">
+                <a href="#" class="nav-logo">
+                    <img class="navLittleLogo" src="./images/logoMiniWit.png">
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#index" class="nav-link" id="homeItem">
+                            Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" id="brasserieItem">Brasserie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link" id="takeawayItem">
+                            Takeaway
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" id="contactItem">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
-                <article class="text">
-                    <img src="./images/logoWit.png" alt="logo wit">
-                    <h1>BRASSERIE - TEAROOM</h1>
-                </article>
-                <div class="onder">
-                    <div class="plaats">
-                        <p>
-                            <a target="_blank"
-                                href="https://www.google.com/maps/place/Brasserie+Devaux/@51.1036748,3.160771,17z/data=!4m12!1m6!3m5!1s0x47c34dc53bb32157:0xac2c2a8d6741b3ba!2sBrasserie+Devaux!8m2!3d51.1036428!4d3.1617971!3m4!1s0x47c34dc53bb32157:0xac2c2a8d6741b3ba!8m2!3d51.1036428!4d3.1617971">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Grote Markt - Zedelgem
-                            </a>
-                        </p>
+            </nav>
+        </header>
+        <section class="main">
+            <img style="width:100%;" class="imgKlein" src="./images/pexels-nadin-sh-11513598.jpg" alt="image">
+            <img class="left" id="scrollableImage" src="./images/pexels-nadin-sh-11513598.jpg" alt="image">
+            <div class="right">
+                <div class="top">
+                    <div class="navPlaceholder"></div>
+                    <article class="text">
+                        <img src="./images/logoWit.png" alt="logo wit">
+                        <h1>BRASSERIE - TEAROOM</h1>
+                    </article>
+                    <div class="onder">
+                        <div class="plaats">
+                            <p>
+                                <a target="_blank"
+                                    href="https://www.google.com/maps/place/Brasserie+Devaux/@51.1036748,3.160771,17z/data=!4m12!1m6!3m5!1s0x47c34dc53bb32157:0xac2c2a8d6741b3ba!2sBrasserie+Devaux!8m2!3d51.1036428!4d3.1617971!3m4!1s0x47c34dc53bb32157:0xac2c2a8d6741b3ba!8m2!3d51.1036428!4d3.1617971">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Grote Markt - Zedelgem
+                                </a>
+                            </p>
+                        </div>
+                        <div class="telefoon">
+                            <p>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel: 050 28 14 78">050 28 14 78</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="telefoon">
-                        <p>
-                            <i class="fas fa-phone-alt"></i>
-                            <a href="tel: 050 28 14 78">050 28 14 78</a>
-                        </p>
-                    </div>
+                </div>
+                <div class="bottom">
+                    <p>This is the bottom</p>
                 </div>
             </div>
         </section>
@@ -51,7 +81,7 @@
             <a href="#uitbaatster"><i class="fas fa-arrow-down"></i></a>
         </div>
         <section class="uitbaatster" id="uitbaatster">
-            <div class="left">
+            <div class="leftUit">
                 <h1>Brasserie Devaux</h1>
                 <p>
                     In onze tearoom - brasserie kan U genieten van het gezellig interieur en een warm onthaal , van
