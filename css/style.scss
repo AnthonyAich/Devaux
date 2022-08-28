@@ -315,9 +315,21 @@ main.index {
 @media screen and (max-width: 768px) {
     main.index {
         section.main {
+            grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr;
+            //area right in top and image bottom grid area
+            grid-template-areas: "right""left";
+
+            img.left {
+                width: 100%;
+                height: 49vh;
+                object-fit: cover;
+                //area name
+                grid-area: left;
+            }
 
             .right {
+                grid-area: right;
                 grid-template-rows: 75px 1fr 60px;
 
                 .nav {
@@ -343,6 +355,7 @@ main.index {
                 .onder {
                     flex-direction: column;
                     align-items: center;
+                    transform: translateY(-20px);
 
                     .plaats {
                         p {
@@ -370,9 +383,11 @@ main.index {
 
             .left {
                 margin: auto 25px;
+                height: 65vh;
 
                 h1 {
                     font-size: 24px;
+                    margin-top: 25px;
                 }
 
                 p {
@@ -381,7 +396,7 @@ main.index {
 
                 .telefoonEnPlaats {
                     position: relative;
-                    bottom: -35px;
+                    bottom: 0px;
 
                     p {
                         color: #373536;
@@ -400,7 +415,7 @@ main.index {
 
             .right {
                 width: 100%;
-                height: 100vh;
+                height: 30vh;
                 object-fit: cover;
             }
 

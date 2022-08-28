@@ -356,10 +356,25 @@ main.index section.openingsuren article p {
 
 @media screen and (max-width: 768px) {
   main.index section.main {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        grid-template-areas: "right" "left";
+  }
+  main.index section.main img.left {
+    width: 100%;
+    height: 49vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: left;
   }
   main.index section.main .right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: right;
     -ms-grid-rows: 75px 1fr 60px;
         grid-template-rows: 75px 1fr 60px;
   }
@@ -380,6 +395,8 @@ main.index section.openingsuren article p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
   main.index section.main .right .onder .plaats p a {
     font-size: 14px;
@@ -396,16 +413,18 @@ main.index section.openingsuren article p {
   }
   main.index section.uitbaatster .left {
     margin: auto 25px;
+    height: 65vh;
   }
   main.index section.uitbaatster .left h1 {
     font-size: 24px;
+    margin-top: 25px;
   }
   main.index section.uitbaatster .left p {
     font-size: 16px;
   }
   main.index section.uitbaatster .left .telefoonEnPlaats {
     position: relative;
-    bottom: -35px;
+    bottom: 0px;
   }
   main.index section.uitbaatster .left .telefoonEnPlaats p {
     color: #373536;
@@ -420,7 +439,7 @@ main.index section.openingsuren article p {
   }
   main.index section.uitbaatster .right {
     width: 100%;
-    height: 100vh;
+    height: 30vh;
     -o-object-fit: cover;
        object-fit: cover;
   }
