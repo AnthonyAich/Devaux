@@ -501,40 +501,34 @@ a {
     // margin-left: 20px;
     margin-left: 1vw;
     background: none;
-    // border: 1px solid $blue;
-    border: 0.05vw solid #373536;
     outline: none;
     color: #fff;
     transition: all 0.3s ease-in-out;
     // font-size: 20px;
     font-size: 1vw;
-    // border-radius: 5px;
-    border-radius: 0.25vw;
     // padding: 5px;
     padding: 0.25vw 0.5vw;
-    animation: navItems 2s ease-in-out;
 }
 
 
 .nav-item {
     // margin-left: 20px;
     margin-left: 1.5vw;
-    animation: navItems 2s ease-in-out;
 
     &:nth-of-type(1) {
-        animation-delay: 0s;
+        animation: navItems 1s ease-in-out;
     }
 
     &:nth-of-type(2) {
-        animation-delay: 0s;
+        animation: navItems 1.2s ease-in-out;
     }
 
     &:nth-of-type(3) {
-        animation-delay: 0s;
+        animation: navItems 1.4s ease-in-out;
     }
 
     &:nth-of-type(4) {
-        animation-delay: 0s;
+        animation: navItems 1.6s ease-in-out;
     }
 }
 
