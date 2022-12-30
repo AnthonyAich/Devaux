@@ -111,7 +111,7 @@ nav .hamburger {
   background-size: auto 107%;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) drop-shadow(0.2px 2px 0 black) drop-shadow(-0.2px -0.1px 0 black);
   z-index: 999;
 }
 .main .homeImage img.mainLogo2 {
