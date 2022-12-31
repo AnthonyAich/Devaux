@@ -107,7 +107,7 @@ nav {
             left: 50%;
             transform: translate(-50%, -50%);
             width: 40%;
-            height: 30%;
+            height: auto;
             object-fit: cover;
             // when passing over an image it wil be white
             z-index: 1;
