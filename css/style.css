@@ -98,22 +98,6 @@ nav .hamburger {
      object-fit: cover;
   border-radius: 0.4rem;
 }
-.main .homeImage div.mainLogo {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 30%;
-  width: 30%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-image: url(../images/devauxFullUpscaled.png);
-  background-size: auto 107%;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: brightness(0) invert(1) drop-shadow(0.2px 2px 0 black) drop-shadow(-0.2px -0.1px 0 black);
-  z-index: 999;
-}
 .main .homeImage img.mainLogo2 {
   position: absolute;
   top: 30%;
@@ -123,15 +107,27 @@ nav .hamburger {
   height: 30%;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: -1;
-  mix-blend-mode: exclusion;
+  z-index: 1;
+}
+.main .homeImage h1.mainTitle {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #373536;
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+  letter-spacing: 0.1rem;
+  z-index: 999;
 }
 .main .homeImage .uitbaatster {
   position: absolute;
-  bottom: 15%;
+  bottom: 12.8%;
   left: 50%;
   padding: 0.5rem 1.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0.3rem 0.3rem 0 0;
   transform: translate(-50%, -50%);
   background-color: #fff;
   width: -webkit-fit-content;
@@ -239,10 +235,11 @@ section.about .openingHours p i {
 
 .fullAboutBottom {
   position: absolute;
-  bottom: 10%;
+  bottom: 9%;
   display: flex;
   width: 100%;
   justify-content: center;
+  z-index: 999;
 }
 .fullAboutBottom .scrollBottom {
   background-color: #373536;
@@ -309,136 +306,6 @@ section.about .openingHours p i {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@media screen and (max-width: 768px) {
-  .main .homeImage img.brasserie {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 0;
-  }
-  .main .homeImage div.mainLogo {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 30%;
-    width: 30%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    background-image: url(../images/devauxFullUpscaled.png);
-    background-size: auto 107%;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0) invert(1);
-    z-index: 999;
-  }
-  .main .homeImage img.mainLogo2 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    height: 30%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    z-index: -1;
-    mix-blend-mode: exclusion;
-  }
-  .main .homeImage .uitbaatster {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid #373536;
-    border-radius: 0.3rem;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -o-object-fit: cover;
-       object-fit: cover;
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    z-index: 999;
-  }
-  section.about {
-    padding: 5% 5%;
-  }
-  section.about .aboutArticle {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-  }
-  section.about .aboutArticle p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #fff;
-    margin-bottom: 2rem;
-    letter-spacing: 0.1rem;
-    line-height: 2rem;
-  }
-  section.about .aboutArticle img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 0.4rem;
-  }
-  .fullAboutBottom {
-    position: absolute;
-    bottom: 10%;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  .fullAboutBottom .scrollBottom {
-    background-color: #373536;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-animation: bounce 1.7s infinite;
-            animation: bounce 1.7s infinite;
-  }
-  .fullAboutBottom .scrollBottom i {
-    color: #fff;
-  }
-  .fullAboutBottom .scrollBottom:hover {
-    background-color: #f5f5f5;
-    border: 2px solid #373536;
-  }
-  .fullAboutBottom .scrollBottom:hover i {
-    color: #373536;
-  }
-  .homeFooter {
-    position: absolute;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    height: 5vh;
-    padding: 0 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .homeFooter p {
-    display: flex;
-    gap: 1rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #373536;
   }
 }
 .startOverlay {
@@ -589,5 +456,58 @@ section.about .openingHours p i {
   }
   90% {
     opacity: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+    padding: 0 5%;
+  }
+  nav .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  .main {
+    padding: 0;
+  }
+  .main .homeImage img.brasserie {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main .homeImage img.mainLogo2 {
+    z-index: 16000;
+    position: absolute;
+    top: 35%;
+    filter: brightness(0) invert(1) drop-shadow(0.2px 2px 0 black) drop-shadow(-0.2px -0.1px 0 black);
+    mix-blend-mode: initial;
+    -o-object-fit: initial;
+       object-fit: initial;
+    height: auto;
+    width: 70%;
+  }
+  .main .homeImage h1.mainTitle {
+    top: 45%;
+    font-size: 1.7rem;
+  }
+  .main .homeImage h2.uitbaatster {
+    bottom: 2%;
+    left: 0;
+    transform: none;
+    width: 100vw;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .startOverlay {
+    display: none;
+  }
+  .startOverlay .startOverlayContent img {
+    width: 50%;
+  }
+  .startOverlay .startOverlayContent p {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */

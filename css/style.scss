@@ -100,23 +100,6 @@ nav {
             border-radius: 0.4rem;
         }
 
-        div.mainLogo {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 30%;
-            width: 30%;
-            object-fit: cover;
-            background-image: url(../images/devauxFullUpscaled.png);
-            background-size: auto 107%;
-            background-position: center;
-            background-repeat: no-repeat;
-            -webkit-filter: brightness(0) invert(1) drop-shadow(0.2px 2.1px 0 black) drop-shadow(-0.2px -0.2px 0 black);
-            filter: brightness(0) invert(1) drop-shadow(0.2px 2px 0 black) drop-shadow(-0.2px -0.1px 0 black);
-            z-index: 999;
-        }
-
         img.mainLogo2 {
             // under every image there is a second image with the same size
             position: absolute;
@@ -127,15 +110,28 @@ nav {
             height: 30%;
             object-fit: cover;
             // when passing over an image it wil be white
-            z-index: -1;
-            mix-blend-mode: exclusion;
+            z-index: 1;
+            // mix-blend-mode: exclusion;
+        }
+        h1.mainTitle {
+            position: absolute;
+            top: 47.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: $darkBeige;
+            padding: 0.5rem 1.5rem;
+            background-color: #fff;
+            letter-spacing: 0.1rem;
+            z-index: 999;
         }
         .uitbaatster {
             position: absolute;
-            bottom: 15%;
+            bottom: 12.8%;
             left: 50%;
             padding: 0.5rem 1.5rem;
-            border-radius: 0.3rem;
+            border-radius: 0.3rem 0.3rem 0 0;
             transform: translate(-50%, -50%);
             background-color: #fff;
             width: fit-content;
@@ -235,10 +231,11 @@ section.about {
 }
 .fullAboutBottom {
     position: absolute;
-    bottom: 10%;
+    bottom: 9%;
     display: flex;
     width: 100%;
     justify-content: center;
+    z-index: 999;
 
     .scrollBottom {
         background-color: $darkBeige;
@@ -298,137 +295,6 @@ section.about {
     }
 }
 
-// mobile view
-@media screen and (max-width: 768px) {
-    .main {
-        .homeImage {
-            img.brasserie {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 0;
-            }
-            div.mainLogo {
-                position: absolute;
-                top: 30%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                height: 30%;
-                width: 30%;
-                object-fit: cover;
-                background-image: url(../images/devauxFullUpscaled.png);
-                background-size: auto 107%;
-                background-position: center;
-                background-repeat: no-repeat;
-                filter: brightness(0) invert(1);
-                z-index: 999;
-            }
-            img.mainLogo2 {
-                // under every image there is a second image with the same size
-                position: absolute;
-                top: 30%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 40%;
-                height: 30%;
-                object-fit: cover;
-                // when passing over an image it wil be white
-                z-index: -1;
-                mix-blend-mode: exclusion;
-            }
-            .uitbaatster {
-                position: absolute;
-                bottom: 15%;
-                left: 50%;
-                padding: 0.5rem 1.5rem;
-                border: 2px solid $darkBeige;
-                border-radius: 0.3rem;
-                transform: translate(-50%, -50%);
-                background-color: #fff;
-                width: fit-content;
-                height: fit-content;
-                object-fit: cover;
-                // more space between the letters
-                font-size: 1.2rem;
-                letter-spacing: 0.1rem;
-                z-index: 999;
-            }
-        }
-    }
-    section.about {
-        padding: 5% 5%;
-        .aboutArticle {
-            display: flex;
-            flex-direction: column;
-            gap: 5rem;
-            p {
-                font-size: 1.2rem;
-                font-weight: 300;
-                color: #fff;
-                margin-bottom: 2rem;
-                letter-spacing: 0.1rem;
-                line-height: 2rem;
-            }
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 0.4rem;
-            }
-        }
-    }
-    .fullAboutBottom {
-        position: absolute;
-        bottom: 10%;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-
-        .scrollBottom {
-            background-color: $darkBeige;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            border: 2px solid #fff;
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: bounce 1.7s infinite;
-
-            i {
-                color: #fff;
-            }
-            &:hover {
-                background-color: #f5f5f5;
-                border: 2px solid $darkBeige;
-                i {
-                    color: $darkBeige;
-                }
-            }
-        }
-    }
-    .homeFooter {
-        position: absolute;
-        bottom: 5%;
-        left: 0;
-        right: 0;
-        height: 5vh;
-        padding: 0 15%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        p {
-            display: flex;
-            gap: 1rem;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: $darkBeige;
-        }
-    }
-}
 .startOverlay {
     position: fixed;
     top: -100vh;
@@ -520,5 +386,68 @@ section.about {
     }
     90% {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        padding: 0 5%;
+        .hamburger {
+            display: block;
+        }
+        ul {
+            display: none;
+        }
+    }
+    .main {
+        padding: 0;
+        .homeImage {
+            img.brasserie {
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+            img.mainLogo2 {
+                z-index: 16000;
+                position: absolute;
+                top: 35%;
+
+                -webkit-filter: brightness(0) invert(1) drop-shadow(0.2px 2.1px 0 black)
+                    drop-shadow(-0.2px -0.2px 0 black);
+                filter: brightness(0) invert(1) drop-shadow(0.2px 2px 0 black) drop-shadow(-0.2px -0.1px 0 black);
+                mix-blend-mode: initial;
+                object-fit: initial;
+                height: auto;
+                width: 70%;
+            }
+            h1.mainTitle {
+                top: 45%;
+                font-size: 1.7rem;
+            }
+            h2.uitbaatster {
+                bottom: 2%;
+                left: 0;
+                transform: none;
+                width: 100vw;
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .startOverlay {
+        // ! moet weg
+        display: none;
+        // ! moet weg
+
+        .startOverlayContent {
+            img {
+                width: 50%;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
