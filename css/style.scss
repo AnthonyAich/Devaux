@@ -54,7 +54,9 @@ nav {
     right: 0;
     height: 10vh;
     background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1600;
+    z-index: 18000;
+    animation: navFadeIn 1.7s ease-in-out;
+    animation-delay: 3s;
 
     .nav-menu {
         width: 100%;
@@ -93,11 +95,18 @@ nav {
         display: flex;
         justify-content: center;
 
-        img.brasserie {
-            width: 30%;
-            height: 75vh;
-            object-fit: cover;
+        div.brasserie {
+            width: 570.594px;
+            height: 708.75px;
             border-radius: 0.4rem;
+            background-image: url("../images/IMG_1488_1024x1024.webp");
+            background-position-y: -175px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+            // darkBeige filter
+            filter: brightness(0.8);
         }
 
         img.mainLogo2 {
@@ -110,7 +119,7 @@ nav {
             height: auto;
             object-fit: cover;
             // when passing over an image it wil be white
-            z-index: 1;
+            z-index: 15000;
             // mix-blend-mode: exclusion;
         }
         h1.mainTitle {
@@ -305,7 +314,7 @@ section.about {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    z-index: 9999;
+    z-index: 19000;
     animation: top 4.5s ease-in-out;
     .startOverlayContent {
         animation: reveal 4s ease-in-out;
@@ -314,9 +323,9 @@ section.about {
             opacity: 0;
             animation: imageHomeOverlay 4s ease-in-out;
         }
-        p {
+        h1 {
             font-size: 1.7rem;
-            font-weight: 300;
+            font-weight: 500;
             color: $darkBeige;
             margin-bottom: 1rem;
             animation: floatIn 4s ease-in-out;
@@ -389,6 +398,18 @@ section.about {
     }
 }
 
+@keyframes navFadeIn {
+    0%,
+    30% {
+        transform: translateY(-5vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 768px) {
     nav {
         width: 100%;
@@ -412,11 +433,8 @@ section.about {
                 z-index: 16000;
                 position: absolute;
                 top: 35%;
-
-                -webkit-filter: brightness(0) invert(1) drop-shadow(0.2px 2.1px 0 black)
-                    drop-shadow(-0.2px -0.2px 0 black);
-                filter: brightness(0) invert(1) drop-shadow(0.2px 2px 0 black) drop-shadow(-0.2px -0.1px 0 black);
-                mix-blend-mode: initial;
+                -webkit-filter: invert(1);
+                filter: invert(1);
                 object-fit: initial;
                 height: auto;
                 width: 70%;
@@ -438,14 +456,14 @@ section.about {
 
     .startOverlay {
         // ! moet weg
-        display: none;
+        // display: none;
         // ! moet weg
 
         .startOverlayContent {
             img {
                 width: 50%;
             }
-            p {
+            h1 {
                 font-size: 1.2rem;
             }
         }

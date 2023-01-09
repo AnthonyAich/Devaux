@@ -11,13 +11,23 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./images/logoD.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/logoD.png">
     <script src="https://kit.fontawesome.com/c12d36ecaa.js" crossorigin="anonymous"></script>
+    <!-- seo -->
+    <meta name="description" content="Brasserie Devaux">
+    <meta name="keywords" content="Brasserie, Devaux, Veldegem, Sabine, Knockaert">
+    <meta name="author" content="Sabine Knockaert">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="google" content="notranslate">
+    <meta name="google" content="nocrtrans">
+
 </head>
 
 <body>
     <section class="startOverlay">
         <article class="startOverlayContent">
             <img src="./images/devauxFullUpscaled.png" alt="Devaux logo">
-            <p class="startOverlayText">Welkom bij Brasserie Devaux</p>
+            <h1 class="startOverlayText">Welkom bij Brasserie Devaux</h1>
         </article>
     </section>
 
@@ -26,11 +36,11 @@
             <div class="nav-menu">
                 <ul>
                     <li class="nav-item">
-                        <a href="#index" class="nav-link" id="homeItem">
+                        <a href="#" class="nav-link">
                             Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link" id="brasserieItem">Brasserie</a>
+                    <li class=" nav-item">
+                        <a href="./devaux.html" class="nav-link">Devaux</a>
                     </li>
                 </ul>
                 <a href="#" class="nav-logo">
@@ -38,12 +48,12 @@
                 </a>
                 <ul>
                     <li class="nav-item">
-                        <a href="#projects" class="nav-link" id="takeawayItem">
+                        <a href="#projects" class="nav-link">
                             Takeaway
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link" id="contactItem">
+                        <a href="#contact" class="nav-link">
                             Contact
                         </a>
                     </li>
@@ -59,7 +69,8 @@
     <main id="top" class="index">
         <section class="main">
             <div class="homeImage">
-                <img class="brasserie" src="./images/IMG_1488_1024x1024.webp" alt="brasserie Devaux">
+                <div class="brasserie" alt="brasserie Devaux">
+                </div>
                 <img class="mainLogo2" src="./images/devauxLogo.svg" alt="Devaux logo">
                 <h1 class="mainTitle">Brasserie</h1>
                 <h2 class="uitbaatster">Sabine Knockaert</h2>
@@ -115,6 +126,14 @@
     <a href="#top" class="scrollTopArrow">
         <i class="fas fa-arrow-up"></i>
     </a>
+    <script>
+        // background position y on .brasserie onscroll
+        window.addEventListener('scroll', function () {
+            const value = 250 + window.scrollY;
+            document.querySelector('.brasserie').style.backgroundPositionY = value * -0.7 + 'px';
+            // document.querySelector('.brasserie').style.opacity = 1 - value / 1000;
+        });
+    </script>
 </body>
 
 </html>

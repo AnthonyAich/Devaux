@@ -52,7 +52,11 @@ nav {
   right: 0;
   height: 10vh;
   background-color: rgba(255, 255, 255, 0.8);
-  z-index: 1600;
+  z-index: 18000;
+  -webkit-animation: navFadeIn 1.7s ease-in-out;
+          animation: navFadeIn 1.7s ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 nav .nav-menu {
   width: 100%;
@@ -91,12 +95,16 @@ nav .hamburger {
   display: flex;
   justify-content: center;
 }
-.main .homeImage img.brasserie {
-  width: 30%;
-  height: 75vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+.main .homeImage div.brasserie {
+  width: 570.594px;
+  height: 708.75px;
   border-radius: 0.4rem;
+  background-image: url("../images/IMG_1488_1024x1024.webp");
+  background-position-y: -175px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(0.8);
 }
 .main .homeImage img.mainLogo2 {
   position: absolute;
@@ -107,7 +115,7 @@ nav .hamburger {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 1;
+  z-index: 15000;
 }
 .main .homeImage h1.mainTitle {
   position: absolute;
@@ -318,7 +326,7 @@ section.about .openingHours p i {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 19000;
   -webkit-animation: top 4.5s ease-in-out;
           animation: top 4.5s ease-in-out;
 }
@@ -332,9 +340,9 @@ section.about .openingHours p i {
   -webkit-animation: imageHomeOverlay 4s ease-in-out;
           animation: imageHomeOverlay 4s ease-in-out;
 }
-.startOverlay .startOverlayContent p {
+.startOverlay .startOverlayContent h1 {
   font-size: 1.7rem;
-  font-weight: 300;
+  font-weight: 500;
   color: #373536;
   margin-bottom: 1rem;
   -webkit-animation: floatIn 4s ease-in-out;
@@ -458,6 +466,26 @@ section.about .openingHours p i {
     opacity: 0;
   }
 }
+@-webkit-keyframes navFadeIn {
+  0%, 30% {
+    transform: translateY(-5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes navFadeIn {
+  0%, 30% {
+    transform: translateY(-5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 768px) {
   nav {
     width: 100%;
@@ -482,8 +510,7 @@ section.about .openingHours p i {
     z-index: 16000;
     position: absolute;
     top: 35%;
-    filter: brightness(0) invert(1) drop-shadow(0.2px 2px 0 black) drop-shadow(-0.2px -0.1px 0 black);
-    mix-blend-mode: initial;
+    filter: invert(1);
     -o-object-fit: initial;
        object-fit: initial;
     height: auto;
@@ -501,13 +528,10 @@ section.about .openingHours p i {
     text-align: center;
     font-size: 1rem;
   }
-  .startOverlay {
-    display: none;
-  }
   .startOverlay .startOverlayContent img {
     width: 50%;
   }
-  .startOverlay .startOverlayContent p {
+  .startOverlay .startOverlayContent h1 {
     font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
